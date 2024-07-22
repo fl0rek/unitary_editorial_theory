@@ -36,3 +36,10 @@ vim.opt.relativenumber = true
 -- smart case search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- netrw open files in a split
+vim.g.netrw_browse_split = 2
+
+if vim.g.neovide then
+    vim.g.neovide_scale_factor = 0.77
+end

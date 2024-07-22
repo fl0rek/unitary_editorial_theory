@@ -19,8 +19,12 @@ require("mason").setup({
 		},
 	}
 })
+require("mason-lspconfig").setup_handlers {
+  ['rust_analyzer'] = function() end,
+}
 require("mason-lspconfig").setup()
 
+--[[
 local rt = require("rust-tools")
 rt.setup({
 	server = {
@@ -32,6 +36,24 @@ rt.setup({
 		end,
 	},
 })
+]]
+
+ide = false
+if ide then
+	-- IDE setup
+	local bufferlist      = require('ide.components.bufferlist')
+	local explorer        = require('ide.components.explorer')
+	local outline         = require('ide.components.outline')
+	local callhierarchy   = require('ide.components.callhierarchy')
+	local timeline        = require('ide.components.timeline')
+	local terminal        = require('ide.components.terminal')
+	local terminalbrowser = require('ide.components.terminal.terminalbrowser')
+	local changes         = require('ide.components.changes')
+	local commits         = require('ide.components.commits')
+	local branches        = require('ide.components.branches')
+	local bookmarks       = require('ide.components.bookmarks')
+	require('ide').setup({})
+end
 
 -- LSP Diagnostics Options Setup 
 local sign = function(opts)
@@ -60,6 +82,41 @@ vim.diagnostic.config({
 		prefix = '',
 	},
 })
+
+vim.g.rustaceanvim = {
+  -- Plugin configuration
+  tools = {},
+  -- LSP configuration
+  server = {
+    on_attach = function(client, bufnr)
+      -- you can also put keymaps in here
+    end,
+    default_settings = {
+      -- rust-analyzer language server configuration
+      ['rust-analyzer'] = {
+        cargo = {
+          target = "wasm32-unknown-unknown"
+        }
+      },
+    },
+  },
+  -- DAP configuration
+  dap = {},
+}
+
+--[[
+local lspconfig = require('lspconfig')
+lspconfig.rust_analyzer.setup {
+  -- Server-specific settings. See `:help lspconfig-setup`
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        target = "wasm32-unknown-unknown"
+      }
+    },
+  },
+}
+]]
 
 vim.cmd([[
 set signcolumn=yes
@@ -150,5 +207,14 @@ require('todo-comments').setup()
 require('trouble').setup()
 
 -- auto resize splits
-require("focus").setup({ autoresize = { height_quickfix = 10 }})
+--require("focus").setup({ autoresize = { height_quickfix = 10 }})
 
+-- GitHub integration
+require('litee.lib').setup()
+require('litee.gh').setup({})
+
+-- lsp at glance
+require('glance').setup()
+
+-- cargo
+require('crates').setup()

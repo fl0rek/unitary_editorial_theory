@@ -8,7 +8,7 @@ return require('packer').startup(function()
 
 	-- rust-analyzer stuff
 	use 'neovim/nvim-lspconfig'
-	use 'simrat39/rust-tools.nvim'
+	use 'mrcjkb/rustaceanvim'
 
 	-- Completion framework:
 	use 'hrsh7th/nvim-cmp'
@@ -84,7 +84,33 @@ return require('packer').startup(function()
 		end
 	}
 
+	--  auto resize following focus
 	use 'nvim-focus/focus.nvim'
+
+	use {
+		'ldelossa/gh.nvim',
+		requires = { { 'ldelossa/litee.nvim' } }
+	}
+
+	-- fzf is back
+	use { "ibhagwan/fzf-lua",
+		-- optional for icon support
+		requires = { "nvim-tree/nvim-web-devicons" }
+	}
+
+	-- import IDE? :thinking:
+	use {
+		'ldelossa/nvim-ide'
+	}
+
+	-- pretty notifications
+	use 'rcarriga/nvim-notify'
+
+	-- lsp at glance
+	use 'dnlhc/glance.nvim'
+
+	-- cargo 
+	use 'saecki/crates.nvim'
 end)
 
 
