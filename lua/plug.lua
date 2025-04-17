@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function() 
 	-- package manager
 	use 'wbthomason/packer.nvim'
 
@@ -111,6 +111,18 @@ return require('packer').startup(function()
 
 	-- cargo 
 	use 'saecki/crates.nvim'
+
+	-- git integration
+	use 'lewis6991/gitsigns.nvim'
+
+	-- progress status window
+	use 'j-hui/fidget.nvim'
+
+	-- auto set indentation options
+	use 'nmac427/guess-indent.nvim'
+
+	-- better nix support
+	use 'LnL7/vim-nix'
 end)
 
 

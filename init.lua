@@ -218,3 +218,25 @@ require('glance').setup()
 
 -- cargo
 require('crates').setup()
+
+-- git integration
+require('gitsigns').setup()
+
+
+-- nix shit
+require('lspconfig').nixd.setup{}
+
+-- AI
+require('llama-copilot').setup({
+	host = "10.0.0.50",
+	port = "11111",
+	model = "codellama:7b-code",
+	max_completion_size = -1,
+	debug = false
+})
+
+-- progress status window
+require('fidget').setup({})
+
+-- auto set indentation options
+require('guess-indent').setup{}
