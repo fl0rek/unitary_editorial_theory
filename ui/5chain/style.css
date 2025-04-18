@@ -161,3 +161,36 @@ a:hover {
         width: 100%;
     }
 }
+/* Info Box (What is 4chan? section) */
+.info-box {
+    background-color: #D6DAF0;
+    border: 1px solid #B7C5D9;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.info-box-header {
+    background-color: #34345C;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 1px solid #B7C5D9;
+}
+
+.info-box-content {
+    padding: 10px;
+}
+
+.info-box-content p {
+    margin-bottom: 10px;
+}
+
+.info-box-content a {
+    color: #34345C;
+    font-weight: bold;
+}
+
+.info-box-content a:hover {
+    text-decoration: underline;
+}
