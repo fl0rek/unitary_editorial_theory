@@ -10,13 +10,13 @@ body {
     font-size: 13px;
     line-height: 1.4;
     color: #000;
-    background-color: #EEF2FF;
+    background-color: #ffffee;
     margin: 0;
     padding: 0;
 }
 
 a {
-    color: #34345C;
+    color: #117743;
     text-decoration: none;
 }
 
@@ -38,13 +38,13 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
-    border-bottom: 1px solid #B7C5D9;
+    border-bottom: 1px solid #b86;
     margin-bottom: 10px;
 }
 
 #top-links a {
     margin-right: 10px;
-    color: #34345C;
+    color: #117743;
     font-weight: bold;
 }
 
@@ -55,15 +55,44 @@ a:hover {
 
 #search input[type="text"] {
     padding: 3px;
-    border: 1px solid #B7C5D9;
+    border: 1px solid #b86;
     width: 200px;
+    background-color: #ffffee;
 }
 
 #search input[type="submit"] {
     padding: 3px 8px;
-    background-color: #E8E8F0;
-    border: 1px solid #B7C5D9;
+    background-color: #f0e0d6;
+    border: 1px solid #b86;
     cursor: pointer;
+}
+
+/* Info Box (What is 4chan? section) */
+.info-box {
+    background-color: #f0e0d6;
+    border: 1px solid #b86;
+    margin-bottom: 15px;
+}
+
+.info-box-header {
+    background-color: #117743;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 1px solid #b86;
+}
+
+.info-box-content {
+    padding: 10px;
+}
+
+.info-box-content p {
+    margin-bottom: 10px;
+}
+
+.info-box-content a {
+    color: #117743;
+    font-weight: bold;
 }
 
 /* Board list */
@@ -76,17 +105,16 @@ a:hover {
 .board-category {
     width: 32%;
     margin-bottom: 20px;
-    background-color: #D6DAF0;
-    border: 1px solid #B7C5D9;
-    border-radius: 4px;
-    padding: 5px;
+    background-color: #f0e0d6;
+    border: 1px solid #b86;
 }
 
 .category-title {
     font-weight: bold;
-    color: #34345C;
+    color: white;
+    background-color: #117743;
     padding: 5px;
-    border-bottom: 1px solid #B7C5D9;
+    border-bottom: 1px solid #b86;
     margin-bottom: 5px;
 }
 
@@ -98,12 +126,12 @@ a:hover {
 .board-link {
     padding: 3px 5px;
     margin: 1px 0;
-    background-color: #E8E8F0;
-    border-radius: 3px;
+    background-color: #ffffee;
+    border: 1px solid #f0e0d6;
 }
 
 .board-link:hover {
-    background-color: #D6DAF0;
+    background-color: #f0e0d6;
     text-decoration: none;
 }
 
@@ -111,10 +139,10 @@ a:hover {
 #footer {
     margin-top: 20px;
     padding: 10px 0;
-    border-top: 1px solid #B7C5D9;
+    border-top: 1px solid #b86;
     text-align: center;
     font-size: 11px;
-    color: #34345C;
+    color: #117743;
 }
 
 .footer-links {
@@ -160,37 +188,4 @@ a:hover {
     #search input[type="text"] {
         width: 100%;
     }
-}
-/* Info Box (What is 4chan? section) */
-.info-box {
-    background-color: #D6DAF0;
-    border: 1px solid #B7C5D9;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    padding: 0;
-}
-
-.info-box-header {
-    background-color: #34345C;
-    color: white;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-bottom: 1px solid #B7C5D9;
-}
-
-.info-box-content {
-    padding: 10px;
-}
-
-.info-box-content p {
-    margin-bottom: 10px;
-}
-
-.info-box-content a {
-    color: #34345C;
-    font-weight: bold;
-}
-
-.info-box-content a:hover {
-    text-decoration: underline;
 }
