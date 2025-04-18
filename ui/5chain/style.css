@@ -95,16 +95,15 @@ a:hover {
     font-weight: bold;
 }
 
-/* Board list */
+/* Board list - Classic 4chan style */
 .board-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .board-category {
-    width: 32%;
-    margin-bottom: 20px;
     background-color: #f0e0d6;
     border: 1px solid #b86;
 }
@@ -113,25 +112,28 @@ a:hover {
     font-weight: bold;
     color: white;
     background-color: #117743;
-    padding: 5px;
+    padding: 5px 8px;
     border-bottom: 1px solid #b86;
-    margin-bottom: 5px;
 }
 
 .boards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5px;
 }
 
 .board-link {
-    padding: 3px 5px;
-    margin: 1px 0;
-    background-color: #ffffee;
-    border: 1px solid #f0e0d6;
+    padding: 4px 8px;
+    margin: 2px 0;
+    color: #117743;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    transition: background-color 0.2s;
 }
 
 .board-link:hover {
-    background-color: #f0e0d6;
+    background-color: rgba(255,255,255,0.5);
     text-decoration: none;
 }
 
@@ -159,14 +161,14 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .board-category {
-        width: 48%;
+    .board-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .board-category {
-        width: 100%;
+    .board-list {
+        grid-template-columns: 1fr;
     }
     
     #top-bar {
