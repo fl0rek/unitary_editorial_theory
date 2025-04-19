@@ -1,19 +1,24 @@
 // Main relays
-export const relayUrls = [
-    "wss://relay.snort.social",
-    "wss://nos.lol",
-    "wss://relay.damus.io",
-    "wss://nostr.mutinywallet.com",
-    "wss://relay.mostr.pub",
-    "wss://relay.ourchan.org",
-  ];
+export const relayUrls = [];
 
 // Boards
 // format is [boardlinkParam, boardPubkeyHash, boardNickname]
 export const boards = [
-  ["test", "11feacea2cdd96a605a3d3d2e04d5284e6097ffde743fe0bae2b8f951e9cc0df", "test"],
-  ["g", "90e71103a2735cc0d104299e18465bea84876d8dd558ff871e969615c50185c8", "General"],
-  ["f", "1180b2a69b0872fc62639c03557ac5bcfe814454f052afe7b7bcb743db675085", "free"],
+  [
+    "test",
+    "11feacea2cdd96a605a3d3d2e04d5284e6097ffde743fe0bae2b8f951e9cc0df",
+    "test",
+  ],
+  [
+    "g",
+    "90e71103a2735cc0d104299e18465bea84876d8dd558ff871e969615c50185c8",
+    "General",
+  ],
+  [
+    "f",
+    "1180b2a69b0872fc62639c03557ac5bcfe814454f052afe7b7bcb743db675085",
+    "free",
+  ],
 ];
 
 // Blotter Messages
@@ -31,14 +36,9 @@ export const pinnedPosts = [
   ["f", "715dc30888b8553380149437cba41dd90cc3ccc94642badd0a376634d2780725"],
 ];
 
-
 //Ads
-export const ads = [
-  ["https://powrelay.xyz/about.html", "https://i.imgur.com/v3xipT9.png"],
-  ["", "https://i.imgur.com/j090mzd.png"],
-];
+export const ads = [];
 
 //NonChan Boards
-export const nonChanBoards = [
-  ["mostr", "Mostr"],
-];
+export const nonChanBoards = [["mostr", "Mostr"]];
+

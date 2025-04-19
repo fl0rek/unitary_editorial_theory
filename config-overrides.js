@@ -6,8 +6,10 @@ const {
 } = require('customize-cra');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
+webpack.experiments.topLevelAwait = true;
+
 module.exports = override(
-  addWebpackPlugin(new NodePolyfillPlugin()),
+  addWebpackPlugin(new NodePolyfillPlugin({excludeAliases: ['console']})),
   addWebpackPlugin(
     new webpack.ProvidePlugin({
       process: 'process/browser',
@@ -16,6 +18,14 @@ module.exports = override(
   ),
   // Allow absolute imports from the root directory
   (config) => {
+                config.module.rules.push({
+                        rules: [
+                                {
+                                        test: /\.wasm$/,
+                                        type: "asset/resource",
+                                },
+                        ],
+                });
     config.resolve.modules.push(path.resolve(__dirname, './'));
     return config;
   }
