@@ -1,80 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4chan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="4chan.png">
-</head>
-<body>
-    <div id="container">
-        <div id="top-bar">
-            <div id="top-links">
-                <a href="/">Home</a>
-                <a href="/faq">FAQ</a>
-                <a href="/rules">Rules</a>
-                <a href="/a/">/a/</a>
-                <a href="/b/">/b/</a>
-                <a href="/g/">/g/</a>
-                <a href="/v/">/v/</a>
-            </div>
-            <div id="logo">
-                <a href="/"><img src="4chan.png" alt="4chan" width="120" height="80"></a>
-            </div>
-            <div id="search">
-                <form action="/search" method="get">
-                    <input type="text" name="q" placeholder="Search...">
-                    <input type="submit" value="Search">
-                </form>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="serverless, adminless, decentralized 4chan alternative" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-        <div id="content">
-            <!-- What is 4chan? Section -->
-            <div class="info-box">
-                <div class="info-box-header">What is 4chan?</div>
-                <div class="info-box-content">
-                    <p>Launched on October 1, 2003, 4chan is a simple image-based bulletin board where anyone can post comments and share images. There are boards dedicated to a variety of topics, from Japanese animation and culture to videogames, music, and photography. Users do not need to register an account before participating in the community. Feel free to click on a board below that interests you and jump right in!</p>
-                    <p>Be sure to familiarize yourself with the <a href="/rules">Rules</a> before posting, and read the <a href="/faq">FAQ</a> if you wish to learn more about how to use the site.</p>
-                </div>
-            </div>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
 
-            <div class="board-list">
-                <div class="board-category">
-                    <div class="category-title">Japanese Culture</div>
-                    <div class="boards">
-                        <a href="/a/" class="board-link">/a/ - Anime & Manga</a>
-                        <a href="/c/" class="board-link">/c/ - Anime/Cute</a>
-                        <a href="/w/" class="board-link">/w/ - Anime/Wallpapers</a>
-                        <a href="/m/" class="board-link">/m/ - Mecha</a>
-                        <a href="/cgl/" class="board-link">/cgl/ - Cosplay & EGL</a>
-                        <a href="/cm/" class="board-link">/cm/ - Cute/Male</a>
-                        <a href="/f/" class="board-link">/f/ - Flash</a>
-                        <a href="/n/" class="board-link">/n/ - Transportation</a>
-                        <a href="/jp/" class="board-link">/jp/ - Otaku Culture</a>
-                        <a href="/vp/" class="board-link">/vp/ - Pokémon</a>
-                    </div>
-                </div>
+    <title>plebchan</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-                <!-- Other board categories remain the same -->
-                <!-- ... -->
-            </div>
-        </div>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-        <div id="footer">
-            <div class="footer-links">
-                <a href="/faq">FAQ</a> -
-                <a href="/rules">Rules</a> -
-                <a href="/feedback">Feedback</a> -
-                <a href="https://sys.4chan.org/4chan-status">Status</a> -
-                <a href="https://github.com/4chan/4chan-API">API</a> -
-                <a href="/ss/">Advertise</a>
-            </div>
-            <div class="copyright">
-                &copy; 2003-2024 4chan community powered by 4channel, Inc. All rights reserved.
-            </div>
-        </div>
-    </div>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>

@@ -70,9 +70,6 @@ in
 
       deno
       silverbullet
-
-      # go
-      gopls
     ];
 
     WASM_BINDGEN_TEST_TIMEOUT = 120;
