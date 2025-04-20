@@ -15,6 +15,7 @@ import init, {
 import { useEffect } from "react";
 import { publish, subscribe, unsubscribe } from "./events";
 import { StoreContext } from "storeon/react";
+import { Town } from "./Town";
 
 declare global {
   interface Window {
@@ -167,7 +168,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/:boardParam" element={<BoardView />} />
             <Route path="/thread/:id" element={<Thread />} />
-            <Route path="/mostr" element={<NonChanView />} />
+            <Route path="/town/:board" element={<Town />} />
           </Routes>
         </div>
       </Router>
